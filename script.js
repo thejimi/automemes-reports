@@ -1,27 +1,24 @@
 const queryString = window.location.search;
 const param = new URLSearchParams(queryString);
-const id = param.get('id')
-const server = param.get('guild')
-const url = param.get('url')
-const type = param.get('type')
+const meme = param.get('meme')
+const id = meme.split('/')[6].split('.')[0]
 
 async function run(){
-    if(!id){
+    if(!meme){
         document.getElementById('modal-nomeme').setAttribute('x-data', '{ isOpen:true }')   
     } else {
-        document.title = `Report ${id}`
+        document.title = id
         document.getElementById('memeid').value = id
-        document.getElementById('memeurl').value = url
-        document.getElementById('memeserver').value = server
+        document.getElementById('memeurl').value = meme
         document.getElementById('report').classList.remove('hidden')
 
-        if(type === 'img'){
-            document.getElementById('display-img').src = `${url}`
-            document.getElementById('display-img').classList.remove('hidden')
-        } else if(type === 'video'){
-            document.getElementById('display-video').src = `${url}`
-            document.getElementById('display-video').classList.remove('hidden')
-        }
+        // if(type === 'img'){
+        //     document.getElementById('display-img').src = `${url}`
+        //     document.getElementById('display-img').classList.remove('hidden')
+        // } else if(type === 'video'){
+        //     document.getElementById('display-video').src = `${url}`
+        //     document.getElementById('display-video').classList.remove('hidden')
+        // }
     }
 
     document.getElementById('loading').classList.add('hidden')

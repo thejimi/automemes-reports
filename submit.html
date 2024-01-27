@@ -226,5 +226,44 @@
     <div id="loading" class="centered">
         <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
+
+    <div x-data="{ isOpen: false }" id="success" class="relative flex justify-center">  
+      <div x-show="isOpen"
+          x-transition:enter="transition duration-300 ease-out"
+          x-transition:enter-start="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+          x-transition:enter-end="translate-y-0 opacity-100 sm:scale-100"
+          x-transition:leave="transition duration-150 ease-in"
+          x-transition:leave-start="translate-y-0 opacity-100 sm:scale-100"
+          x-transition:leave-end="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+          class="fixed inset-0 z-10 overflow-y-auto" 
+          aria-labelledby="modal-title" role="dialog" aria-modal="true"
+      >
+          <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+              <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+      
+              <div class="relative inline-block p-4 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl sm:max-w-sm rounded-xl dark:bg-neutral-900 sm:my-8 sm:w-full sm:p-6">
+                  <!-- <div class="flex items-center justify-center mx-auto">
+                      <img class="h-full rounded-lg" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+                  </div> -->
+  
+                  <div class="mt-5 text-center">
+                      <h3 class="text-lg font-medium text-neutral-800 dark:text-white" id="modal-title">
+                          Thank you, for being awesome!
+                      </h3>
+  
+                      <p class="mt-2 text-neutral-500 dark:text-neutral-400">
+                          Your report has been submitted. If you provided your real Discord username & joined our server, you will receive a DM about the actions taken.
+                      </p>
+                  </div>
+  
+                  <div class="mt-4 sm:flex sm:items-center sm:justify-between sm:mt-6 sm:-mx-2">
+                      <button onclick="window.open('https://discord.gg/memery')" class="px-4 sm:mx-2 w-full py-2.5 mt-3 sm:mt-0 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-40">
+                          Join our Discord server
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </body>
 </html>

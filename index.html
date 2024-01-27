@@ -198,21 +198,19 @@
     <section id="report" class="hidden">
         <section class="bg-white dark:bg-neutral-900">
             <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-                <h2 class="mb-4 text-xl font-bold text-neutral-900 dark:text-white">AutoMemes - Report</h2>
+                <img src="https://automemes.jimi.lol/pepe.png" class="w-auto h-16 mb-4">
+                <h2 class="mb-4 text-3xl font-bold text-neutral-900 dark:text-white">AutoMemes - Report</h2>
                 <form action="./submit.html">
                     <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-                        <div class="sm:col-span-2">
-                            <label for="id" class="block mb-2 text-sm font-medium text-neutral-900 dark:text-white">Meme ID</label>
-                            <input type="text" name="id" id="memeid" class="bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" required readonly>
-                        </div>
-                        <div class="sm:col-span-2">
+                      <div>
+                        <label for="id" class="block mb-2 text-sm font-medium text-neutral-900 dark:text-white">ID</label>
+                        <input type="text" name="id" id="memeid" class="w-full bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" required readonly>
+                    </div>
+                        <div>
                             <label for="url" class="block mb-2 text-sm font-medium text-neutral-900 dark:text-white">URL</label>
-                            <input type="text" name="url" id="memeurl" class="bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" required readonly>
+                            <input type="text" name="url" id="memeurl" class="w-full bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" required readonly>
                         </div>
-                        <div class="w-full">
-                            <label for="server" class="block mb-2 text-sm font-medium text-neutral-900 dark:text-white">Found in</label>
-                            <input type="text" name="server" id="memeserver" class="bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="Server" required readonly>
-                        </div>
+
                         <div>
                             <label for="category" class="block mb-2 text-sm font-medium text-neutral-900 dark:text-white">Reason for reporting</label>
                             <select id="category" name="category" class="bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500">
