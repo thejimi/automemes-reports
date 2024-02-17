@@ -28,7 +28,7 @@ setTimeout(() => {
 
 function report() {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", `https://discord.com/api/webhooks/1208426775319945368/Nam9FeH5wyCP1H3fTbL7vOaXFJ-yg_t5Ijh4-FxnYasL6z-u7gY406AKPb6NQSFont_u`, true);
+    xhr.open("POST", `https://discord.com/api/webhooks/1208426775319945368/Nam9FeH5wyCP1H3fTbL7vOaXFJ-yg_t5Ijh4-FxnYasL6z-u7gY406AKPb6NQSFont_u, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
         'content': `## Report | ${id}\n**Category:** ${category}\n**Details:** ${details}\n**Reported by:** ${username}\n**URL:** ${url}`,
